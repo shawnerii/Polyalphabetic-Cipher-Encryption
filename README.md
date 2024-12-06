@@ -1,11 +1,25 @@
-in Monoalphabetic Cipher each letter in the text is mapped to a unique letter in the ciphertext using a fixed key. It is vulnerable to frequency analysis because the relative frequencies of letters are predictable.
+DES encrypts data in 64 bit block using 56 bit key and performs a complex bitwise operation to
+secure information. My code does the following:
 
-The main steps are:
+• Generates a 56 bit encryption key.
 
-1. Generate a substitution key.
+• Defines the DES encryption and decryption functions using a standard DES
+transformations.
 
-2. Implement the encryption and decryption functions.
+• Encrypts and decrypts the text using DES, and storing results in text files.
 
-3. Use frequency analysis as an analysis technique to break the cipher.
+My code is in separate Python files, each one is responsible for a specific part of the DES
+algorithm. Which includes:
 
-For the German text I specifically encrypted only the English alphabets so ä’, ‘ö’, ‘ü’, ‘ß would remain unchanged. In this case only the code for the attack is needed to be adjusted for the German letter frequencies.
+• key_schedule.py
+
+
+• permutations.py
+
+• sbox.py
+
+• des_encrypt_decrypt.py
+
+• utils.py
+
+• main.py
